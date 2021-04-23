@@ -12,7 +12,7 @@ public class TicTacToeRunner {
 
         while (!(ttt.isWinner('X') || ttt.isWinner('O') || ttt.isFull())) {
             ttt.displayBoard();
-            System.out.print( "'" + p + "', choose your location (row, column): " );
+            System.out.print( "'" + p + "', choose your location (e.g., 0 2 or 1 1): " );
             r = keyboard.nextInt();
             c = keyboard.nextInt();
 
@@ -23,7 +23,7 @@ public class TicTacToeRunner {
                 else if ( ttt.playerAt(r,c) != ' ' )
                     System.out.println("That location is already full. Try again.");
 
-                System.out.print( "Choose your location (row, column): " );
+                System.out.print( "\n'" + p + "', please choose a valid location (e.g., 1 0 or 2 2): " );
                 r = keyboard.nextInt();
                 c = keyboard.nextInt();
             }
